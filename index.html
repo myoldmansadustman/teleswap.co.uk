@@ -7,28 +7,28 @@
     <style>
         body {
             margin: 0;
-            padding: 0;
             font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             color: #333;
+            line-height: 1.6;
         }
         header {
             background-color: #0078d7;
-            color: #fff;
-            padding: 20px 0;
+            color: white;
+            padding: 20px;
             text-align: center;
         }
         header h1 {
             margin: 0;
             font-size: 2.5rem;
         }
-        .container {
+        main {
             text-align: center;
             padding: 50px 20px;
         }
         .logo {
-            max-width: 300px;
             margin: 20px auto;
+            max-width: 300px;
         }
         .description {
             font-size: 1.5rem;
@@ -36,11 +36,11 @@
         }
         .cta-button {
             display: inline-block;
+            text-decoration: none;
+            background-color: #0078d7;
+            color: white;
             padding: 15px 30px;
             font-size: 1.2rem;
-            color: #fff;
-            background-color: #0078d7;
-            text-decoration: none;
             border-radius: 5px;
             transition: background-color 0.3s ease;
         }
@@ -48,16 +48,19 @@
             background-color: #005bb5;
         }
         .footer {
-            margin-top: 40px;
             display: flex;
             justify-content: center;
             gap: 15px;
+            margin-top: 50px;
         }
         .footer img {
             max-height: 40px;
         }
-        .footer a {
-            display: inline-block;
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px 0;
+            background-color: #f4f4f4;
         }
     </style>
 </head>
@@ -65,13 +68,13 @@
     <header>
         <h1>TeleSwap</h1>
     </header>
-    <div class="container">
-        <img src="https://teleswap.io/assets/GasPumpLogo-Db6VIjRl.gif" alt="TeleSwap Logo" class="logo">
+    <main>
+        <img class="logo" src="https://teleswap.io/assets/GasPumpLogo-Db6VIjRl.gif" alt="TeleSwap Logo">
         <p class="description">
-            Welcome to TeleSwap, where you can swap cryptocurrency quickly & easily all within Telegram.<br>
-            Open our Telegram Mini App and enjoy instantly swapping over 750+ tokens without any sign-ups.
+            Welcome to TeleSwap, where you can swap cryptocurrency quickly and easily, all within Telegram.<br>
+            Open our Telegram Mini App to swap over 750+ tokens instantly without sign-ups.
         </p>
-        <a href="https://t.me/TeleSwapAppBot?start=7037213884" target="_blank" class="cta-button">Use the Mini App Now!</a>
+        <a href="https://t.me/TeleSwapAppBot?start=7037213884" target="_blank" class="cta-button">Use the Mini App Now</a>
         <div class="footer">
             <a href="https://www.coingecko.com/en/coins/teleswap" target="_blank">
                 <img src="https://teleswap.io/assets/topapp-BslRfo-Q.svg" alt="CoinGecko">
@@ -83,6 +86,9 @@
                 <img src="https://teleswap.io/5d11192fcce095bd196e405cbb3fc9b3" alt="Telegram Community">
             </a>
         </div>
-    </div>
+    </main>
+    <footer>
+        <p>&copy; 2025 TeleSwap. All rights reserved.</p>
+    </footer>
 </body>
 </html>
