@@ -3,55 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TeleSwap Exchange</title>
+    <title>TeleSwap</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+            font-family: Arial, sans-serif;
             background-color: #f4f4f4;
             color: #333;
         }
+        header {
+            background-color: #0078d7;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
         .container {
             text-align: center;
-            padding: 20px;
-            border: 2px solid #ccc;
-            border-radius: 10px;
-            background: #fff;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 50px 20px;
         }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            color: #0078d7;
+        .logo {
+            max-width: 300px;
+            margin: 20px auto;
         }
-        p {
+        .description {
+            font-size: 1.5rem;
+            margin: 20px 0;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
             font-size: 1.2rem;
-            margin-bottom: 20px;
-        }
-        a {
-            text-decoration: none;
             color: #fff;
             background-color: #0078d7;
-            padding: 10px 20px;
+            text-decoration: none;
             border-radius: 5px;
-            font-size: 1rem;
             transition: background-color 0.3s ease;
         }
-        a:hover {
+        .cta-button:hover {
             background-color: #005bb5;
+        }
+        .footer {
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+        .footer img {
+            max-height: 40px;
+        }
+        .footer a {
+            display: inline-block;
         }
     </style>
 </head>
 <body>
+    <header>
+        <h1>TeleSwap</h1>
+    </header>
     <div class="container">
-        <h1>Welcome to TeleSwap Exchange</h1>
-        <p>Swap almost any cryptocurrency quickly and easily within Telegram.</p>
-        <a href="https://t.me/TeleSwapAppBot?start=7037213884" target="_blank">Use TeleSwap Now</a>
+        <img src="https://teleswap.io/assets/GasPumpLogo-Db6VIjRl.gif" alt="TeleSwap Logo" class="logo">
+        <p class="description">
+            Welcome to TeleSwap, where you can swap cryptocurrency quickly & easily all within Telegram.<br>
+            Open our Telegram Mini App and enjoy instantly swapping over 750+ tokens without any sign-ups.
+        </p>
+        <a href="https://t.me/TeleSwapAppBot?start=7037213884" target="_blank" class="cta-button">Use the Mini App Now!</a>
+        <div class="footer">
+            <a href="https://www.coingecko.com/en/coins/teleswap" target="_blank">
+                <img src="https://teleswap.io/assets/topapp-BslRfo-Q.svg" alt="CoinGecko">
+            </a>
+            <a href="https://x.com/TeleSwapTON" target="_blank">
+                <img src="https://teleswap.io/6da067d5f17757cad08c02389daa9dcb" alt="TeleSwap on X">
+            </a>
+            <a href="https://t.me/TeleSwapCommunity" target="_blank">
+                <img src="https://teleswap.io/5d11192fcce095bd196e405cbb3fc9b3" alt="Telegram Community">
+            </a>
+        </div>
     </div>
 </body>
 </html>
