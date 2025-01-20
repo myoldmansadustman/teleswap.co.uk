@@ -5,90 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeleSwap</title>
     <style>
+        /* General Reset */
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(180deg, #e3f8ff 0%, #c9e9f7 100%);
             color: #333;
+            text-align: center;
             line-height: 1.6;
         }
-        header {
-            background-color: #0078d7;
-            color: white;
-            padding: 20px;
+
+        /* Content Box */
+        .content-box {
+            max-width: 750px;
+            margin: 50px auto;
+            padding: 30px 25px;
+            border-radius: 15px;
+            background: white;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
             text-align: center;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+
+        .content-box p {
+            font-size: 1.2rem;
+            margin: 15px 0;
+            color: #555;
         }
-        main {
-            text-align: center;
-            padding: 50px 20px;
+
+        .content-box p:first-of-type {
+            margin-top: 0;
         }
-        .logo {
-            margin: 20px auto;
-            max-width: 300px;
-        }
-        .description {
-            font-size: 1.5rem;
-            margin: 20px 0;
-        }
+
         .cta-button {
             display: inline-block;
-            text-decoration: none;
-            background-color: #0078d7;
-            color: white;
-            padding: 15px 30px;
+            margin-top: 25px;
+            padding: 15px 40px;
             font-size: 1.2rem;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
+            font-weight: bold;
+            color: white;
+            background-color: #0078d7;
+            border: none;
+            border-radius: 25px;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 120, 215, 0.2);
         }
+
         .cta-button:hover {
             background-color: #005bb5;
+            box-shadow: 0 6px 14px rgba(0, 120, 215, 0.3);
         }
-        .footer {
+
+        /* Image Links */
+        .image-links {
+            margin-top: 30px;
             display: flex;
             justify-content: center;
-            gap: 15px;
-            margin-top: 50px;
+            gap: 40px;
         }
-        .footer img {
-            max-height: 40px;
-        }
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            padding: 20px 0;
-            background-color: #f4f4f4;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>TeleSwap</h1>
-    </header>
-    <main>
-        <img class="logo" src="https://teleswap.io/assets/GasPumpLogo-Db6VIjRl.gif" alt="TeleSwap Logo">
-        <p class="description">
-            Welcome to TeleSwap, where you can swap cryptocurrency quickly and easily, all within Telegram.<br>
-            Open our Telegram Mini App to swap over 750+ tokens instantly without sign-ups.
-        </p>
-        <a href="https://t.me/TeleSwapAppBot?start=7037213884" target="_blank" class="cta-button">Use the Mini App Now</a>
-        <div class="footer">
-            <a href="https://www.coingecko.com/en/coins/teleswap" target="_blank">
-                <img src="https://teleswap.io/assets/topapp-BslRfo-Q.svg" alt="CoinGecko">
-            </a>
-            <a href="https://x.com/TeleSwapTON" target="_blank">
-                <img src="https://teleswap.io/6da067d5f17757cad08c02389daa9dcb" alt="TeleSwap on X">
-            </a>
-            <a href="https://t.me/TeleSwapCommunity" target="_blank">
-                <img src="https://teleswap.io/5d11192fcce095bd196e405cbb3fc9b3" alt="Telegram Community">
-            </a>
-        </div>
-    </main>
-    <footer>
-        <p>&copy; 2025 TeleSwap. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+
+        .image-links a i
