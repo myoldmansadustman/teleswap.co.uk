@@ -5,57 +5,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeleSwap</title>
     <style>
+        /* General Reset */
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
-            background: linear-gradient(to bottom, #d9f3ff, #a0d9f5);
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(180deg, #dff6ff 0%, #b9e4f8 100%);
             color: #333;
             text-align: center;
             line-height: 1.6;
         }
+
+        /* Header Section */
         header {
             background-color: #0078d7;
-            padding: 30px 20px;
+            padding: 40px 20px;
             text-align: center;
             color: white;
         }
+
         header img {
-            max-width: 150px;
+            max-width: 120px;
             margin-bottom: 15px;
         }
+
         header h1 {
-            font-size: 2.5rem;
+            font-size: 3rem;
+            font-weight: bold;
             margin: 0;
         }
+
+        /* Content Box */
         .content-box {
-            max-width: 800px;
+            max-width: 750px;
             margin: 50px auto;
-            padding: 30px 20px;
+            padding: 30px 25px;
             border-radius: 15px;
             background: white;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
             text-align: center;
         }
+
         .content-box p {
             font-size: 1.2rem;
             margin: 15px 0;
             color: #555;
         }
+
+        .content-box p:first-of-type {
+            margin-top: 0;
+        }
+
         .cta-button {
             display: inline-block;
-            padding: 15px 30px;
+            margin-top: 25px;
+            padding: 15px 40px;
             font-size: 1.2rem;
+            font-weight: bold;
             color: white;
             background-color: #0078d7;
             border: none;
             border-radius: 25px;
             text-decoration: none;
             cursor: pointer;
-            transition: background-color 0.3s ease;
-            margin-top: 15px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 120, 215, 0.2);
         }
+
         .cta-button:hover {
             background-color: #005bb5;
+            box-shadow: 0 6px 14px rgba(0, 120, 215, 0.3);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+
+            .content-box {
+                margin: 30px 15px;
+                padding: 20px;
+            }
+
+            .cta-button {
+                font-size: 1.1rem;
+                padding: 12px 30px;
+            }
         }
     </style>
 </head>
