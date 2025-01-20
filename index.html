@@ -6,34 +6,48 @@
     <title>TeleSwap</title>
     <style>
         /* General Reset */
-        body {
+        * {
             margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
             font-family: 'Arial', sans-serif;
-            background: linear-gradient(180deg, #e3f8ff 0%, #c9e9f7 100%);
+            background: linear-gradient(180deg, #dff6ff 0%, #b9e4f8 100%);
             color: #333;
+        }
+
+        /* Full Page Layout */
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
             text-align: center;
-            line-height: 1.6;
+            flex-direction: column;
+        }
+
+        /* Logo */
+        .logo {
+            max-width: 150px;
+            margin-bottom: 20px;
         }
 
         /* Content Box */
         .content-box {
             max-width: 750px;
-            margin: 50px auto;
             padding: 30px 25px;
             border-radius: 15px;
             background: white;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            text-align: center;
         }
 
         .content-box p {
             font-size: 1.2rem;
             margin: 15px 0;
             color: #555;
-        }
-
-        .content-box p:first-of-type {
-            margin-top: 0;
         }
 
         .cta-button {
@@ -77,7 +91,7 @@
         /* Responsive Adjustments */
         @media (max-width: 768px) {
             .content-box {
-                margin: 30px 15px;
+                margin: 0 15px;
                 padding: 20px;
             }
 
@@ -97,12 +111,19 @@
     </style>
 </head>
 <body>
-    <div class="content-box">
-        <img src="https://teleswap.io/assets/GasPumpLogo-Db6VIjRl.gif" alt="TeleSwap Logo" style="max-width: 120px; margin-bottom: 15px;">
-        <p>Welcome to TeleSwap, where you can swap cryptocurrency quickly & easily all within Telegram.</p>
-        <p>Open our Telegram Mini App and enjoy instantly swapping over 750+ tokens without any sign ups.</p>
-        <p>Use the Mini App Now! 🚀</p>
-        <a href="https://t.me/TeleSwapAppBot?start=7037213884" target="_blank" class="cta-button">TeleSwap</a>
+    <div class="container">
+        <!-- Logo -->
+        <img src="https://teleswap.io/assets/GasPumpLogo-Db6VIjRl.gif" alt="TeleSwap Logo" class="logo">
+        
+        <!-- Content Box -->
+        <div class="content-box">
+            <p>Welcome to TeleSwap, where you can swap cryptocurrency quickly & easily all within Telegram.</p>
+            <p>Open our Telegram Mini App and enjoy instantly swapping over 750+ tokens without any sign ups.</p>
+            <p>Use the Mini App Now! 🚀</p>
+            <a href="https://t.me/TeleSwapAppBot?start=7037213884" target="_blank" class="cta-button">TeleSwap</a>
+        </div>
+
+        <!-- Image Links -->
         <div class="image-links">
             <a href="https://www.coingecko.com/en/coins/teleswap" target="_blank">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/3/36/CoinGecko_logo.png" alt="CoinGecko Logo">
