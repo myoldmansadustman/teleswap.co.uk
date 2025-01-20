@@ -13,22 +13,32 @@
             text-align: center;
             line-height: 1.6;
         }
-        .container {
+        header {
+            background-color: #0078d7;
+            padding: 30px 20px;
+            text-align: center;
+            color: white;
+        }
+        header img {
+            max-width: 150px;
+            margin-bottom: 15px;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+        .content-box {
             max-width: 800px;
             margin: 50px auto;
-            padding: 20px;
+            padding: 30px 20px;
             border-radius: 15px;
             background: white;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
         }
-        h1 {
-            font-size: 2.5rem;
-            color: #0078d7;
-        }
-        .description {
+        .content-box p {
             font-size: 1.2rem;
-            margin: 20px 0;
+            margin: 15px 0;
             color: #555;
         }
         .cta-button {
@@ -42,60 +52,23 @@
             text-decoration: none;
             cursor: pointer;
             transition: background-color 0.3s ease;
+            margin-top: 15px;
         }
         .cta-button:hover {
             background-color: #005bb5;
         }
-        .logos {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin: 30px 0;
-        }
-        .logos img {
-            max-width: 50px;
-            transition: transform 0.3s ease;
-        }
-        .logos img:hover {
-            transform: scale(1.1);
-        }
-        .footer {
-            margin-top: 20px;
-            font-size: 1rem;
-            color: #666;
-        }
-        .footer .badge {
-            display: inline-block;
-            margin-top: 20px;
-            font-size: 1.2rem;
-            color: #0078d7;
-            font-weight: bold;
-        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to TeleSwap</h1>
-        <p class="description">
-            Swap cryptocurrency quickly & easily all within Telegram.<br>
-            Open our Telegram Mini App and enjoy instantly swapping over 750+ tokens without any sign-ups.
-        </p>
+    <header>
+        <img src="https://teleswap.io/assets/GasPumpLogo-Db6VIjRl.gif" alt="TeleSwap Logo">
+        <h1>TeleSwap</h1>
+    </header>
+    <div class="content-box">
+        <p>Welcome to TeleSwap, where you can swap cryptocurrency quickly & easily all within Telegram.</p>
+        <p>Open our Telegram Mini App and enjoy instantly swapping over 750+ tokens without any sign ups.</p>
         <p>Use the Mini App Now! 🚀</p>
         <a href="https://t.me/TeleSwapAppBot?start=7037213884" target="_blank" class="cta-button">TeleSwap</a>
-        <div class="logos">
-            <a href="https://www.coingecko.com/en/coins/teleswap" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/8b/CoinGecko_logo.png" alt="CoinGecko Logo">
-            </a>
-            <a href="https://x.com/TeleSwapTON" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Twitter_Logo_Blue.png" alt="Twitter Logo">
-            </a>
-            <a href="https://t.me/TeleSwapCommunity" target="_blank">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram Logo">
-            </a>
-        </div>
-        <div class="footer">
-            <span class="badge">#1 Bridge in TON App</span>
-        </div>
     </div>
 </body>
 </html>
