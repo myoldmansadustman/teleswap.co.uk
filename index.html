@@ -31,8 +31,17 @@
 
         /* Logo */
         .logo {
-            max-width: 150px;
+            max-width: 300px; /* Increased to double size */
             margin-bottom: 20px;
+        }
+
+        /* TeleSwap Text */
+        .tele-text {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         /* Content Box */
@@ -100,6 +109,14 @@
                 padding: 12px 30px;
             }
 
+            .tele-text {
+                font-size: 2rem;
+            }
+
+            .logo {
+                max-width: 200px; /* Slightly smaller on smaller screens */
+            }
+
             .image-links {
                 gap: 20px;
             }
@@ -114,7 +131,10 @@
     <div class="container">
         <!-- Logo -->
         <img src="https://teleswap.io/assets/GasPumpLogo-Db6VIjRl.gif" alt="TeleSwap Logo" class="logo">
-        
+
+        <!-- TeleSwap Text -->
+        <div class="tele-text">TeleSwap</div>
+
         <!-- Content Box -->
         <div class="content-box">
             <p>Welcome to TeleSwap, where you can swap cryptocurrency quickly & easily all within Telegram.</p>
