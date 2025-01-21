@@ -19,6 +19,16 @@
             color: #333;
         }
 
+        /* Pulse Animation */
+        @keyframes pulse {
+            0%, 100% {
+                box-shadow: 0 0 15px rgba(0, 120, 215, 0.8), 0 0 30px rgba(0, 120, 215, 0.5);
+            }
+            50% {
+                box-shadow: 0 0 25px rgba(0, 120, 215, 1), 0 0 50px rgba(0, 120, 215, 0.8);
+            }
+        }
+
         /* Full Page Layout */
         .container {
             display: flex;
@@ -34,8 +44,8 @@
         .logo {
             max-width: 200px;
             margin-bottom: 20px;
-            box-shadow: 0 0 20px rgba(0, 120, 215, 0.8); /* Blue glow */
             border-radius: 10px;
+            animation: pulse 2s infinite; /* Pulsing glow animation */
         }
 
         /* Title */
@@ -52,10 +62,10 @@
             max-width: 750px;
             padding: 30px;
             border-radius: 15px;
-            background: linear-gradient(180deg, #dff6ff 0%, #b9e4f8 100%); /* Match page background */
-            box-shadow: 0 0 20px rgba(0, 120, 215, 0.8); /* Blue glow */
+            background: linear-gradient(180deg, #dff6ff 0%, #b9e4f8 100%);
             text-align: center;
             margin-bottom: 40px;
+            animation: pulse 2s infinite; /* Pulsing glow animation */
         }
 
         .content-box p {
@@ -74,14 +84,13 @@
             border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 0 15px rgba(0, 120, 215, 0.8); /* Blue glow */
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            animation: pulse 2s infinite; /* Pulsing glow animation */
         }
 
         .cta-link:hover {
             background-color: #005bb5;
             transform: scale(1.05);
-            box-shadow: 0 0 25px rgba(0, 120, 215, 1); /* Intensify blue glow on hover */
         }
 
         /* Logos Below Text Box */
@@ -103,10 +112,9 @@
             transform: scale(1.1); /* Zoom effect only */
         }
 
-        /* Centered Image Below Logos */
+        /* Centered Transparent Image Below Logos */
         .below-all-logos {
             margin-top: 30px;
-            position: relative;
             display: flex;
             justify-content: center;
         }
@@ -114,16 +122,12 @@
         .below-all-logos img {
             max-width: 150px;
             height: auto;
-            filter: opacity(0.8); /* Make image slightly transparent */
-            box-shadow: 0 0 30px rgba(0, 120, 215, 0.6), /* Glow around */
-                        0 0 60px rgba(0, 120, 215, 0.5); /* Extended glow */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            filter: opacity(0.8); /* Slight transparency */
+            transition: transform 0.3s ease; /* Smooth scaling on hover */
         }
 
         .below-all-logos img:hover {
             transform: scale(1.1);
-            box-shadow: 0 0 40px rgba(0, 120, 215, 0.8), /* Intensified glow */
-                        0 0 80px rgba(0, 120, 215, 0.6);
         }
 
         /* Responsive Design */
@@ -178,7 +182,7 @@
             </a>
         </div>
 
-        <!-- Centered Transparent Image with Blue Glow -->
+        <!-- Centered Transparent Image Without Glow -->
         <div class="below-all-logos">
             <img src="https://raw.githubusercontent.com/myoldmansadustman/teleswap.co.uk/main/Images/numberonebridge.svg" alt="Number One Bridge">
         </div>
