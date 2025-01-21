@@ -35,7 +35,6 @@
             max-width: 200px;
             margin-bottom: 30px; /* Add spacing below the logo */
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Soft shadow */
         }
 
         /* Title */
@@ -44,7 +43,6 @@
             font-weight: bold;
             color: white;
             margin-bottom: 40px; /* Added spacing below the text */
-            text-shadow: none; /* No glow or shadow */
         }
 
         /* Content Box */
@@ -74,14 +72,12 @@
             border-radius: 25px;
             text-decoration: none;
             font-weight: bold;
-            transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
 
         .cta-link:hover {
             background-color: #005bb5;
             transform: scale(1.05);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Slightly deeper shadow on hover */
         }
 
         /* Logos Below Text Box */
@@ -96,13 +92,11 @@
         .below-textbox a img {
             max-width: 100px;
             height: auto;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
+            transition: transform 0.3s ease;
         }
 
         .below-textbox a img:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Slightly deeper shadow on hover */
+            transform: scale(1.1); /* Zoom effect only */
         }
 
         /* Centered Transparent Image Below Logos */
@@ -116,13 +110,11 @@
             max-width: 150px;
             height: auto;
             filter: opacity(0.8); /* Slight transparency */
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Soft shadow */
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            transition: transform 0.3s ease; /* Smooth scaling on hover */
         }
 
         .below-all-logos img:hover {
             transform: scale(1.1);
-            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Slightly deeper shadow on hover */
         }
 
         /* Responsive Design */
@@ -182,7 +174,7 @@
             </a>
         </div>
 
-        <!-- Centered Transparent Image Without Glow -->
+        <!-- Centered Transparent Image Without Shadow -->
         <div class="below-all-logos">
             <img src="https://raw.githubusercontent.com/myoldmansadustman/teleswap.co.uk/main/Images/numberonebridge.svg" alt="Number One Bridge">
         </div>
