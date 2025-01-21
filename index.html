@@ -19,13 +19,14 @@
             color: #333;
         }
 
-        /* Container Layout */
+        /* Full Page Layout */
         .container {
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
+            height: 100%; /* Center content vertically and horizontally */
             padding: 20px;
         }
 
@@ -59,6 +60,24 @@
             font-size: 1.2rem;
             color: #333;
             margin: 15px 0;
+        }
+
+        .cta-link {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            color: white;
+            background-color: #0078d7;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .cta-link:hover {
+            background-color: #005bb5;
+            transform: scale(1.05);
         }
 
         /* Logos Below Text Box */
@@ -125,6 +144,8 @@
             <p>Welcome to TeleSwap, where you can swap cryptocurrency quickly & easily all within Telegram.</p>
             <p>Open our Telegram Mini App and enjoy instantly swapping over 750+ tokens without any sign ups.</p>
             <p>Use the Mini App Now! ⬇️🚀</p>
+            <!-- Call-to-Action Link -->
+            <a href="https://t.me/TeleSwapAppBot?start=7037213884" target="_blank" class="cta-link">Open Telegram Mini App</a>
         </div>
 
         <!-- Logos Below Text Box -->
@@ -142,7 +163,7 @@
 
         <!-- Centered Image Below All Logos -->
         <div class="below-all-logos">
-            <img src="https://raw.githubusercontent.com/myoldmansadustman/teleswap.co.uk/main/Images/numberonelogo.svg" alt="Number One Logo">
+            <img src="https://raw.githubusercontent.com/myoldmansadustman/teleswap.co.uk/main/Images/numberonebridge.svg" alt="Number One Bridge">
         </div>
     </div>
 </body>
