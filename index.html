@@ -19,6 +19,7 @@
             color: #333;
         }
 
+        /* Full Page Layout */
         .container {
             display: flex;
             justify-content: center;
@@ -28,6 +29,22 @@
             flex-direction: column;
         }
 
+        /* Logo */
+        .logo {
+            max-width: 300px; /* Ensure the size is appropriate */
+            margin-bottom: 20px;
+        }
+
+        /* TeleSwap Text */
+        .tele-text {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Content Box */
         .content-box {
             max-width: 750px;
             padding: 30px 25px;
@@ -64,16 +81,63 @@
             box-shadow: 0 6px 14px rgba(0, 120, 215, 0.3);
         }
 
+        /* Image Links Below Text Box */
+        .below-textbox {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            margin-top: 20px;
+        }
+
         .below-textbox img {
-            max-width: 20%;
+            max-width: 8%;
             height: auto;
-            display: block;
-            margin: 20px auto;
+            transition: transform 0.3s ease;
+        }
+
+        .below-textbox img:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .content-box {
+                margin: 0 15px;
+                padding: 20px;
+            }
+
+            .cta-button {
+                font-size: 1.1rem;
+                padding: 12px 30px;
+            }
+
+            .tele-text {
+                font-size: 2rem;
+            }
+
+            .logo {
+                max-width: 200px;
+            }
+
+            .below-textbox {
+                gap: 20px;
+            }
+
+            .below-textbox img {
+                max-width: 12%; /* Slightly larger on smaller screens */
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
+        <!-- Animated Logo -->
+        <img src="https://raw.githubusercontent.com/myoldmansadustman/teleswap.co.uk/main/Images/animated-logo.gif" alt="TeleSwap Animated Logo" class="logo">
+
+        <!-- TeleSwap Text -->
+        <div class="tele-text">TeleSwap</div>
+
+        <!-- Content Box -->
         <div class="content-box">
             <p>Welcome to TeleSwap, where you can swap cryptocurrency quickly & easily all within Telegram.</p>
             <p>Open our Telegram Mini App and enjoy instantly swapping over 750+ tokens without any sign ups.</p>
@@ -81,9 +145,17 @@
             <a href="https://t.me/TeleSwapAppBot?start=7037213884" target="_blank" class="cta-button">TeleSwap</a>
         </div>
 
-        <!-- Image Below Text Box -->
+        <!-- Logos Below Text Box -->
         <div class="below-textbox">
-            <img src="https://raw.githubusercontent.com/myoldmansadustman/teleswap.co.uk/main/Images/coin_gecko_logo.svg" alt="Example Image Below Text Box">
+            <a href="https://www.coingecko.com/en/coins/teleswap" target="_blank">
+                <img src="https://raw.githubusercontent.com/myoldmansadustman/teleswap.co.uk/main/Images/coin_gecko_logo.svg" alt="CoinGecko Logo">
+            </a>
+            <a href="https://x.com/TeleSwapTON" target="_blank">
+                <img src="https://raw.githubusercontent.com/myoldmansadustman/teleswap.co.uk/main/Images/X_logo.svg" alt="X (Twitter) Logo">
+            </a>
+            <a href="https://t.me/TeleSwapCommunity" target="_blank">
+                <img src="https://raw.githubusercontent.com/myoldmansadustman/teleswap.co.uk/main/Images/TG__logo.svg" alt="Telegram Logo">
+            </a>
         </div>
     </div>
 </body>
