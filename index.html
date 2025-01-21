@@ -19,112 +19,95 @@
             color: #333;
         }
 
-        /* Full Page Layout */
+        /* Container Layout */
         .container {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
-            text-align: center;
             flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
         }
 
-        /* Logo */
+        /* Logo at the Top */
         .logo {
-            max-width: 300px; /* Ensure the size is appropriate */
+            max-width: 200px;
             margin-bottom: 20px;
         }
 
-        /* TeleSwap Text */
+        /* Title */
         .tele-text {
             font-size: 2.5rem;
             font-weight: bold;
             color: white;
-            margin-bottom: 20px;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
         }
 
         /* Content Box */
         .content-box {
             max-width: 750px;
-            padding: 30px 25px;
+            padding: 30px;
             border-radius: 15px;
             background: white;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            margin-bottom: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            margin-bottom: 40px;
         }
 
         .content-box p {
             font-size: 1.2rem;
+            color: #333;
             margin: 15px 0;
-            color: #555;
         }
 
-        .cta-button {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 15px 40px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: white;
-            background-color: #0078d7;
-            border: none;
-            border-radius: 25px;
-            text-decoration: none;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 10px rgba(0, 120, 215, 0.2);
-        }
-
-        .cta-button:hover {
-            background-color: #005bb5;
-            box-shadow: 0 6px 14px rgba(0, 120, 215, 0.3);
-        }
-
-        /* Image Links Below Text Box */
+        /* Logos Below Text Box */
         .below-textbox {
             display: flex;
-            justify-content: center;
-            gap: 50px;
-            margin-top: 20px;
+            justify-content: space-between;
+            gap: 40px;
+            max-width: 750px;
+            margin: 20px auto;
         }
 
-        .below-textbox img {
-            max-width: 8%;
+        .below-textbox a img {
+            max-width: 100px;
             height: auto;
             transition: transform 0.3s ease;
         }
 
-        .below-textbox img:hover {
+        .below-textbox a img:hover {
             transform: scale(1.1);
         }
 
-        /* Responsive Adjustments */
+        /* Centered Image Below Logos */
+        .below-all-logos {
+            margin-top: 30px;
+        }
+
+        .below-all-logos img {
+            max-width: 150px;
+            height: auto;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
             .content-box {
                 margin: 0 15px;
                 padding: 20px;
             }
 
-            .cta-button {
-                font-size: 1.1rem;
-                padding: 12px 30px;
-            }
-
-            .tele-text {
-                font-size: 2rem;
-            }
-
-            .logo {
-                max-width: 200px;
-            }
-
             .below-textbox {
+                flex-wrap: wrap;
                 gap: 20px;
             }
 
-            .below-textbox img {
-                max-width: 12%; /* Slightly larger on smaller screens */
+            .below-textbox a img {
+                max-width: 80px;
+            }
+
+            .below-all-logos img {
+                max-width: 120px;
             }
         }
     </style>
@@ -132,17 +115,16 @@
 <body>
     <div class="container">
         <!-- Animated Logo -->
-        <img src="https://raw.githubusercontent.com/myoldmansadustman/teleswap.co.uk/main/Images/animated-logo.gif" alt="TeleSwap Animated Logo" class="logo">
+        <img src="https://teleswap.io/assets/GasPumpLogo-Db6VIjRl.gif" alt="TeleSwap Logo" class="logo">
 
-        <!-- TeleSwap Text -->
+        <!-- Title -->
         <div class="tele-text">TeleSwap</div>
 
         <!-- Content Box -->
         <div class="content-box">
             <p>Welcome to TeleSwap, where you can swap cryptocurrency quickly & easily all within Telegram.</p>
             <p>Open our Telegram Mini App and enjoy instantly swapping over 750+ tokens without any sign ups.</p>
-            <p>Use the Mini App Now! 🚀</p>
-            <a href="https://t.me/TeleSwapAppBot?start=7037213884" target="_blank" class="cta-button">TeleSwap</a>
+            <p>Use the Mini App Now! ⬇️🚀</p>
         </div>
 
         <!-- Logos Below Text Box -->
@@ -156,6 +138,11 @@
             <a href="https://t.me/TeleSwapCommunity" target="_blank">
                 <img src="https://raw.githubusercontent.com/myoldmansadustman/teleswap.co.uk/main/Images/TG__logo.svg" alt="Telegram Logo">
             </a>
+        </div>
+
+        <!-- Centered Image Below All Logos -->
+        <div class="below-all-logos">
+            <img src="https://raw.githubusercontent.com/myoldmansadustman/teleswap.co.uk/main/Images/TG__logo.svg" alt="Number One Logo">
         </div>
     </div>
 </body>
