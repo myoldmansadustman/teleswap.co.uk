@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TeleSwap Mini App</title>
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <style>
         /* General Reset */
         * {
@@ -14,39 +16,80 @@
 
         html, body {
             height: 100%;
-            overflow: hidden; /* Ensures no scrollbars for the iframe */
+            font-family: 'Roboto', Arial, sans-serif; /* Slim sans-serif font */
+            background: linear-gradient(180deg, #dff6ff 0%, #b9e4f8 100%);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
         }
 
+        /* Title Section */
+        .title {
+            font-size: 3rem;
+            font-weight: 400;
+            color: #0078d7;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #555;
+            margin-bottom: 20px;
+        }
+
+        /* Iframe Styling */
         iframe {
-            width: 100%;
-            height: 100%;
-            border: none; /* Removes iframe border for a seamless look */
+            width: 90%;
+            height: 60%;
+            border: 2px solid #0078d7;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
 
-        /* Fallback Message for Older Browsers */
+        /* Fallback Message Styling */
         .no-iframe {
             display: none;
-            font-family: Arial, sans-serif;
             font-size: 1rem;
             color: #333;
-            padding: 20px;
-            text-align: center;
+            margin-top: 20px;
         }
 
-        /* Show fallback text if iframe is unsupported */
+        .no-iframe a {
+            color: #0078d7;
+            text-decoration: none;
+            font-weight: 400;
+        }
+
+        .no-iframe a:hover {
+            text-decoration: underline;
+        }
+
+        /* Display fallback if iframe is not supported */
         iframe:disabled + .no-iframe {
             display: block;
         }
     </style>
 </head>
 <body>
-    <!-- Embed the Telegram Mini App -->
-    <iframe src="https://t.me/TeleSwapAppBot?start=7037213884"></iframe>
-
-    <!-- Fallback message if iframe isn't supported -->
-    <div class="no-iframe">
-        <p>Your browser doesn't support the embedded content. Please visit:</p>
-        <a href="https://t.me/TeleSwapAppBot?start=7037213884" target="_blank">Open Telegram Mini App</a>
+    <div>
+        <!-- Page Title -->
+        <div class="title">TeleSwap Exchange</div>
+        <!-- Subtitle -->
+        <div class="subtitle">
+            You can swap almost any cryptocurrency quickly and easily right now in our Mini App.
+        </div>
+        <!-- Embedded Telegram Mini App -->
+        <iframe src="https://t.me/TeleSwapAppBot?start=7037213884"></iframe>
+        <!-- Fallback for Unsupported Iframe -->
+        <div class="no-iframe">
+            <p>Your browser doesn't support the embedded Mini App. Please visit:</p>
+            <a href="https://t.me/TeleSwapAppBot?start=7037213884" target="_blank">Open Telegram Mini App</a>
+        </div>
     </div>
 </body>
 </html>
