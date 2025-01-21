@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TeleSwap Mini App</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden; /* Ensures no scrollbars for the iframe */
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none; /* Removes iframe border for a seamless look */
+        }
+
+        /* Fallback Message for Older Browsers */
+        .no-iframe {
+            display: none;
+            font-family: Arial, sans-serif;
+            font-size: 1rem;
+            color: #333;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Show fallback text if iframe is unsupported */
+        iframe:disabled + .no-iframe {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!-- Embed the Telegram Mini App -->
+    <iframe src="https://t.me/TeleSwapAppBot?start=7037213884"></iframe>
+
+    <!-- Fallback message if iframe isn't supported -->
+    <div class="no-iframe">
+        <p>Your browser doesn't support the embedded content. Please visit:</p>
+        <a href="https://t.me/TeleSwapAppBot?start=7037213884" target="_blank">Open Telegram Mini App</a>
+    </div>
+</body>
+</html>
