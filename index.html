@@ -48,4 +48,175 @@
         }
         #reels {
             display: flex;
-            justify
+            justify-content: center;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .reel {
+            width: 100px;
+            height: 100px;
+            border: 3px solid #777;
+            border-radius: 5px;
+            background: #222;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+        }
+        .reel img {
+            width: 100%;
+        }
+        #controls {
+            margin-top: 20px;
+        }
+        button {
+            padding: 15px 25px;
+            font-size: 18px;
+            border: none;
+            background: #28a745;
+            color: white;
+            border-radius: 10px;
+            cursor: pointer;
+            box-shadow: 0 5px #1d6b32;
+            transition: transform 0.2s;
+        }
+        button:hover {
+            transform: scale(1.1);
+        }
+        button:active {
+            box-shadow: 0 2px #1d6b32;
+            transform: translateY(2px);
+        }
+        #balance {
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        #message {
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            color: yellow;
+        }
+        .winning-reel {
+            border: 3px solid gold;
+            animation: glow 1.5s infinite alternate;
+        }
+        @keyframes glow {
+            from { box-shadow: 0 0 5px gold; }
+            to { box-shadow: 0 0 20px gold; }
+        }
+        #confetti {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 10;
+        }
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: rgba(255, 0, 0, 0.8);
+            animation: fall 2s linear infinite;
+        }
+        @keyframes fall {
+            from { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+            to { transform: translateY(100vh) rotate(360deg); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div id="slot-machine">
+        <div id="lights">
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+            <div class="light"></div>
+        </div>
+        <div id="reels">
+            <div class="reel"><img src="token1.png" alt="Token"></div>
+            <div class="reel"><img src="token2.png" alt="Token"></div>
+            <div class="reel"><img src="token3.png" alt="Token"></div>
+        </div>
+        <div id="controls">
+            <button id="spin-btn">Spin</button>
+        </div>
+        <div id="balance">Balance: 1.000 BTC</div>
+        <div id="message"></div>
+    </div>
+    <div id="confetti"></div>
+    <script>
+        const spinBtn = document.getElementById('spin-btn');
+        const reels = document.querySelectorAll('.reel img');
+        const confettiContainer = document.getElementById('confetti');
+        let balance = 1.0;
+        const betAmount = 0.01;
+
+        spinBtn.addEventListener('click', () => {
+            if (balance < betAmount) {
+                alert('Insufficient balance!');
+                return;
+            }
+            balance -= betAmount;
+            updateBalance();
+            spinReels().then(() => {
+                const outcome = Math.random() > 0.5 ? 'win' : 'lose';
+                if (outcome === 'win') {
+                    triggerWinEffect(0.05); // Win 0.05 BTC
+                } else {
+                    updateMessage('Better luck next time!');
+                }
+            });
+        });
+
+        function spinReels() {
+            return new Promise(resolve => {
+                reels.forEach((reel, index) => {
+                    reel.style.animation = 'spin 1s ease-in-out';
+                    setTimeout(() => {
+                        const randomToken = `token${Math.ceil(Math.random() * 3)}.png`;
+                        reel.src = randomToken;
+                        reel.style.animation = ''; // Reset animation
+                        if (index === reels.length - 1) resolve(); // Resolve after the last reel stops
+                    }, 1000);
+                });
+            });
+        }
+
+        function updateBalance() {
+            document.getElementById('balance').textContent = `Balance: ${balance.toFixed(3)} BTC`;
+        }
+
+        function updateMessage(msg) {
+            document.getElementById('message').textContent = msg;
+        }
+
+        function triggerWinEffect(amount) {
+            balance += amount;
+            updateBalance();
+            updateMessage(`You won ${amount.toFixed(3)} BTC!`);
+            triggerConfetti();
+        }
+
+        function triggerConfetti() {
+            for (let i = 0; i < 100; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti-piece';
+                confetti.style.left = `${Math.random() * 100}%`;
+                confetti.style.backgroundColor = getRandomColor();
+                confettiContainer.appendChild(confetti);
+                setTimeout(() => confetti.remove(), 2000);
+            }
+        }
+
+        function getRandomColor() {
+            const colors = ['#FF5733', '#33FF57', '#3357FF', '#FFFF33'];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+    </script>
+</body>
+</html>
